@@ -3,10 +3,13 @@ import "./App.css";
 import Header from "./Header";
 import Home from "./Home";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Barbers from "./Barbers";
-import Customer from "./Customer";
-import SearchResults from "./SearchResults";
-import Contact from "./Contact";
+import Barbers from "./Barber/Barbers";
+import Customer from "./Client/Customer";
+import SearchResults from "./Client/SearchResults";
+import Contact from "./Client/Contact";
+import NewBarber from "./Barber/NewBarber";
+import MakeProfile from "./Barber/MakeProfile";
+import Profile from "./Barber/Profile";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Route path="/customer" component={Customer} />
         <Route path="/barber-list" component={SearchResults} />
         <Route path="/contact" component={Contact} />
+        <Route path="/new-user" component={NewBarber} />
+        <Route path="/edit-profile" component={MakeProfile} />
+        <Route path="/profile" component={Profile}></Route>
       </Router>
     </div>
   );

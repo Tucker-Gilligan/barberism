@@ -75,3 +75,30 @@ fieldset {
   flex-direction: column;
   align-items: center;
 }
+
+.barberLogin {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.newBarber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.makeProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barberProfile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  text-align: left;
+}
