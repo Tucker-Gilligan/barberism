@@ -33,7 +33,7 @@ export default function MakeProfile() {
         <button>Upload Photos</button>
         <br />
         <br />
-        <Link to="/">
+        <Link to="/profile">
           <button>Submit</button>
         </Link>
       </fieldset>

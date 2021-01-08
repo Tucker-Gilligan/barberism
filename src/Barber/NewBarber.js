@@ -17,7 +17,7 @@ export default function NewBarber() {
           <br />
           <input type="text"></input>
           <br />
-          <Link to="/profile">
+          <Link to="/edit-profile">
             <button>Submit</button>
           </Link>
         </form>
