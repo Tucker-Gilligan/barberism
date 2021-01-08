@@ -1,13 +1,77 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+header {
+  border-bottom: solid 2px;
+  text-align: center;
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#location-search {
+  width: 150px;
+  align-self: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.barberList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.barberListItem {
+  align-self: center;
+  text-align: left;
+  border: solid 1px;
+  padding: 20px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactFormInput {
+  width: 200px;
+  align-self: center;
+}
+
+.formEntry {
+  display: flex;
+  justify-content: center;
+}
+
+.contactPage {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  width: 250px;
+}
+
+.locateBarber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
