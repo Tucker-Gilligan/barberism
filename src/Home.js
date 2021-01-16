@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Barbers from "./Barber/Barbers";
-import Customer from "./Client/Customer";
+
 
 export default function Home() {
   return (
