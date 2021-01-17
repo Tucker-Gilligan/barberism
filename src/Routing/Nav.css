@@ -1,0 +1,13 @@
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 20px;
+  border: solid 1px;
+  border-radius: 15px;
+  padding: 5px;
+  color: black;
+}

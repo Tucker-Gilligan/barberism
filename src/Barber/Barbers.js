@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Barbers() {
+export default function Barbers(props) {
   return (
     <div className="barberLogin">
       <h3>Welcome Barber!</h3>
