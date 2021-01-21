@@ -4,7 +4,7 @@ function RegisterNewBarber() {
       <fieldset>
         <legend>Register a New Barber</legend>
         <form>
-          <label for="barberName">Name</label>
+          <label htmlFor="barberName">Name</label>
           <input type="text" id="barberName"></input>
         </form>
       </fieldset>

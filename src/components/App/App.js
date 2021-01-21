@@ -4,7 +4,6 @@ import AboutPage from '../../routes/AboutPage';
 import Header from '../Header/Header';
 import BarberListPage from '../../routes/BarberListPage';
 import RegisterNewBarber from '../../routes/RegisterNewBarber';
-import React, { Component } from 'react';
 
 function App() {
   return (

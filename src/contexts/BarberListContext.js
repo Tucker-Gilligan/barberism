@@ -1,5 +1,47 @@
-import React, { Component } from 'react';
+// import React, { useState } from 'react';
 
+// const BarberListContext = React.createContext({
+//   barberList: [],
+//   error: null,
+//   setError: () => {},
+//   clearError: () => {},
+//   setBarberList: () => {},
+// });
+// export default BarberListContext;
+
+// export function BarberListProvider({ children }) {
+//   const [barberList, setBarberList] = useState([]);
+//   const [error, setError] = useState(null);
+
+//   const set_barber_list = barber => {
+//     setBarberList(barber);
+//   };
+
+//   const set_error = () => {
+//     console.error(error);
+//     setError(error);
+//   };
+
+//   const clear_error = () => {
+//     setError(null);
+//   };
+
+//   const value = {
+//     barberList: barberList,
+//     error: set_error,
+//     setError: set_error,
+//     clearError: clear_error,
+//     setBarberList: set_barber_list,
+//   };
+//   console.log(value);
+
+//   return (
+//     <BarberListContext.Provider value={value}>
+//       {children}
+//     </BarberListContext.Provider>
+//   );
+// }
+import React, { Component } from 'react';
 const BarberListContext = React.createContext({
   barberList: [],
   error: null,
@@ -15,12 +57,12 @@ export class BarberListProvider extends Component {
     error: null,
   };
 
-  setBarberList = (barberList) => {
-    console.log(barberList);
+  setBarberList = barberList => {
+    console.log('set barber list firing', barberList);
     this.setState({ barberList });
   };
 
-  setError = (error) => {
+  setError = error => {
     console.error(error);
     this.setState({ error });
   };

@@ -2,8 +2,8 @@
 import React from 'react';
 
 export const nullBarber = {
-  name: '',
-  location: '',
+  barber_name: '',
+  barber_location: '',
   services: '',
   phone_number: '',
   email: '',
@@ -35,7 +35,7 @@ export class BarberProvider extends React.Component {
   //     setError(error)
   // }
 
-  setError = (error) => {
+  setError = error => {
     console.error(error);
     this.setState({ error });
   };
@@ -51,7 +51,7 @@ export class BarberProvider extends React.Component {
   //       setBarber(barber)
   //   }
 
-  setBarber = (barber) => {
+  setBarber = barber => {
     this.setState({ barber });
   };
 
