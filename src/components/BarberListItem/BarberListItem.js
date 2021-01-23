@@ -16,9 +16,10 @@ export default class BarberListItem extends Component {
       // <Link to={`/barbers/${barber.id}`} className="BarberListItem">
       <div className="BarberListItem__details">
         <h2 className="BarberListItem__heading">{barber.barber_name}</h2>
+        <h3 className="Services__label">Services Offered</h3>
+        <p className="BarberListItem__services">{barber.services}</p>
         <ul className="BarberListItem__description">
           <li className="BarberListItem__item">{barber.barber_location}</li>
-          <li className="BarberListItem__item">{barber.services}</li>
           <li className="BarberListItem__item">{barber.phone_number}</li>
           <li className="BarberListItem__item">{barber.email}</li>
         </ul>

@@ -32,8 +32,13 @@ select {
   color: rgba(255, 255, 255, 0.904);
   font-size: 12px;
   width: 120px;
-  padding: 2px;
+  display: flex;
+
   align-items: center;
+  justify-content: center;
+  padding-right: 2px;
+
+  text-overflow: unset;
 }
 
 .service__dropdown {

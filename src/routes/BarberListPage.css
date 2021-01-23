@@ -1,0 +1,39 @@
+.BarberListItem__details {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 0.1rem 0.2rem rgb(0, 0, 0));
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(21, 11, 155);
+  padding: 20px;
+  text-align: center;
+  color: rgb(235, 235, 235);
+  overflow-wrap: break-word;
+
+  /* align-items: center; */
+}
+
+.BarberListItem__description {
+  padding-left: 0;
+  margin-right: 0;
+  text-align: right;
+  list-style: none;
+}
+
+.BarberListItem__heading {
+  margin: auto;
+  margin-left: 0;
+  text-align: left;
+}
+
+.Services__label {
+  margin-bottom: 0px;
+  font-style: oblique;
+}
+
+.BarberListItem__services {
+  margin-top: 0px;
+}

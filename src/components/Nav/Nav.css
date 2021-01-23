@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Permanent+Marker&display=swap');
+
 .title__nav {
   margin-left: 30px;
 }
@@ -10,6 +12,9 @@
   flex-direction: row;
   justify-content: center;
   margin: 0px;
+
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Permanent Marker', cursive;
 }
 
 h1 {
@@ -29,21 +34,24 @@ h1 {
   flex-direction: space-around;
   font-size: 12px;
   list-style: none;
-  margin: 5px 15px 10px 0;
+  margin: 9px 15px 10px 0;
   justify-content: center;
   padding: 2px;
+  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .route__link {
   display: flex;
   flex-direction: column;
   border: solid 0.5px;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 3px;
   margin: 2px;
-  font-size: 12px;
+  font-size: 11px;
   width: 45px;
   text-align: center;
+  box-shadow: inset 0 0 3px #000000;
 }
 
 a {
