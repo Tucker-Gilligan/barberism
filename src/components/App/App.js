@@ -1,14 +1,16 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import AboutPage from '../../routes/AboutPage';
-import Header from '../Header/Header';
 import BarberListPage from '../../routes/BarberListPage';
 import RegisterNewBarber from '../../routes/RegisterNewBarber';
+import Nav from '../Nav/Nav';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <div>
+        <Nav />
+      </div>
       <main className="app__main">
         <Switch>
           <Route exact path={'/'} component={AboutPage} />

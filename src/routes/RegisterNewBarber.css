@@ -1,0 +1,5 @@
+.NewBarberForm {
+  display: flex;
+  flex-direction: center;
+  width: 200px;
+}

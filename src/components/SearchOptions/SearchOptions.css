@@ -1,0 +1,46 @@
+.search__bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.select__services {
+  display: flex;
+  flex-direction: column;
+}
+
+.search__by__state {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 12px;
+  text-align: center;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 22px;
+  text-overflow: '';
+}
+
+.state__dropdown {
+  border-radius: 10px;
+  background-color: green;
+  color: rgba(255, 255, 255, 0.904);
+  font-size: 12px;
+  width: 120px;
+  padding: 2px;
+  align-items: center;
+}
+
+.service__dropdown {
+  border-radius: 10px;
+  background-color: green;
+  color: rgba(255, 255, 255, 0.904);
+  width: 120px;
+  font-size: 12px;
+  padding: 2px;
+}

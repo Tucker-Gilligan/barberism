@@ -42,7 +42,7 @@ import BarberApiService from '../services/barber-api-service';
 import { Section } from '../components/Utils/Utils';
 import BarberListItem from '../components/BarberListItem/BarberListItem';
 import './BarberListPage.css';
-
+import SearchOptions from '../components/SearchOptions/SearchOptions';
 export default class BarberListPage extends Component {
   static contextType = BarberListContext;
 
@@ -63,13 +63,17 @@ export default class BarberListPage extends Component {
   render() {
     const { error } = this.context;
     return (
-      <Section list className="BarberListPage">
-        {error ? (
-          <p className="red">There was an error, try again</p>
-        ) : (
-          this.renderBarbers()
-        )}
-      </Section>
+      <div>
+        <SearchOptions />
+        <Section list className="BarberListPage">
+          {error ? (
+            <p className="red">There was an error, try again</p>
+          ) : (
+            this.renderBarbers()
+            //this.renderBarbers()
+          )}
+        </Section>
+      </div>
     );
   }
 }

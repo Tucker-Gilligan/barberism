@@ -1,34 +1,40 @@
 import { Link } from 'react-router-dom';
+import './Nav.css';
 
 function Nav() {
   return (
-    <ul className="nav-links">
-      <li>
-        <Link className="nav-link" to="/">
-          About
-        </Link>
-      </li>
-      <li>
-        <Link className="nav-link" to="/find-barber">
+    <div className="nav__header">
+      <div className="title__nav">
+        <h1>Barberism</h1>
+      </div>
+      <ul className="nav__links">
+        <li className="route__link">
+          <Link className="nav__link" to="/">
+            About
+          </Link>
+        </li>
+        <li className="route__link">
+          <Link className="nav__link" to="/find-barber">
+            Find
+          </Link>
+        </li>
+        <li className="route__link">
+          <Link className="nav__link" to="/register-barber">
+            Register{' '}
+          </Link>
+        </li>
+        {/* <li className="route__link">
+        <Link className="nav__link" to="/customer">
           Find Barber
         </Link>
       </li>
-      <li>
-        <Link className="nav-link" to="/register-barber">
-          Register New Barber
-        </Link>
-      </li>
-      {/* <li>
-        <Link className="nav-link" to="/customer">
-          Find Barber
-        </Link>
-      </li>
-      <li>
-        <Link className="nav-link" to="/barbers">
+      <li className="route__link">
+        <Link className="nav__link" to="/barbers">
           Register Barber
         </Link>
       </li> */}
-    </ul>
+      </ul>
+    </div>
   );
 }
 
