@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/2?family=Fira+Sans:wght@200&family=Permanent+Marker&display=swap');
 
 .title__nav {
   margin-left: 30px;
@@ -12,33 +12,41 @@
   flex-direction: row;
   justify-content: center;
   margin: 0px;
-
   font-family: 'Fira Sans', sans-serif;
   font-family: 'Permanent Marker', cursive;
 }
 
 h1 {
   text-align: center;
-  font-size: 30px;
+  font-size: 55px;
   margin: 0px;
   filter: drop-shadow(0.1rem 0.1rem 0.1rem rgb(0, 0, 0));
+  letter-spacing: 4px;
+  margin-bottom: 0;
 }
 
 .nav__header {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
 .nav__links {
   display: flex;
-  flex-direction: space-around;
   font-size: 12px;
   list-style: none;
-  margin: 9px 15px 10px 0;
+  margin: 5px 15px 10px 0;
   justify-content: center;
   padding: 2px;
   font-family: 'Fira Sans', sans-serif;
-  font-family: 'Permanent Marker', cursive;
+}
+
+Nav:active {
+  color: #fdeed2;
+}
+
+Nav:visited {
+  text-decoration: none;
 }
 
 .route__link {
@@ -47,13 +55,17 @@ h1 {
   border: solid 0.5px;
   border-radius: 5px;
   padding: 3px;
-  margin: 2px;
+  margin: 0 5px;
   font-size: 11px;
   width: 45px;
   text-align: center;
   box-shadow: inset 0 0 3px #000000;
+  background-color: #263938;
+  color: #fdeed2;
+  padding: 10px;
 }
 
-a {
+a:visited {
   text-decoration: none;
+  color: #fdeed2;
 }

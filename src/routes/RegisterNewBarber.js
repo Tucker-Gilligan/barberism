@@ -38,6 +38,7 @@ export default class RegisterNewBarber extends Component {
               placeholder="Joe Barber"
             />
             <label htmlFor="location">Location</label>
+            <br />
             <select
               id="location"
               name="barberLocation"
@@ -97,18 +98,71 @@ export default class RegisterNewBarber extends Component {
               <option value="WI">Wisconsin</option>
               <option value="WY">Wyoming</option>
             </select>
-            <label htmlFor="services">Services Provided</label>
-            <select
+            <br />
+            <label htmlFor="service__selection" className="Services__label">
+              Services Provided
+            </label>
+            <br />
+            {/* <select
               id="services"
               name="services"
               value={this.context.services}
               className="select__field"
-            >
-              <option value="">Select service</option>
-              <option value="sensory_hours">Sensory hours</option>
-              <option value="scissor_cuts">Scissor cuts</option>
-              <option value="long_apt">Longer appointments </option>
-            </select>
+            > */}
+            {/* <option value="">Select service</option> */}
+            <ul className="service__selection" id="service__selection">
+              <li className="service__option">
+                <input
+                  type="checkbox"
+                  id="sensory"
+                  name="services"
+                  value="1"
+                  className="select__field"
+                />
+                <label htmlFor="sensory_hours" className="Service__label">
+                  Sensory Hours
+                </label>
+              </li>
+              <li className="service__option">
+                <input
+                  type="checkbox"
+                  id="scissor_cuts"
+                  name="services"
+                  value="2"
+                  className="select__field"
+                />
+                <label htmlFor="sensory_hours" className="Service__label">
+                  Scissor cuts
+                </label>
+              </li>
+              <li className="service__option">
+                <input
+                  type="checkbox"
+                  id="longer_appointments"
+                  name="services"
+                  value="3"
+                  className="select__field"
+                />
+                <label htmlFor="longer_appointments" className="Service__label">
+                  Longer Appointments
+                </label>
+              </li>
+              <li className="service__option">
+                <input
+                  type="checkbox"
+                  id="home_haircuts"
+                  name="services"
+                  value="4"
+                  className="select__field"
+                />
+                <label htmlFor="home_haircuts" className="Service__label">
+                  Home Haircuts
+                </label>
+              </li>
+            </ul>
+            {/* <option value="scissor_cuts">Scissor cuts</option>
+              <option value="long_apt">Longer appointments </option> */}
+            {/* </select> */}
             <label htmlFor="phone">Phone Number</label>
             <input
               type="text"
@@ -125,7 +179,7 @@ export default class RegisterNewBarber extends Component {
               value={this.context.email}
             />
           </div>
-          <button typeof="submit">Post New Barber</button>
+          <button type="submit">Post New Barber</button>
         </form>
       </div>
     );

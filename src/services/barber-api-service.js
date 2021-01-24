@@ -1,9 +1,10 @@
 import config from '../config';
 
 const barberURL = `${config.API_ENDPOINT}/barbers`;
+
 const BarberApiService = {
   getBarbers() {
-    return fetch(barberURL, {
+    return fetch(`${barberURL}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -23,10 +24,44 @@ const BarberApiService = {
       phone_number,
       email,
     };
-    console.log(JSON.stringify(barber));
-    return fetch(barberURL, {
+    return fetch(`${barberURL}/api/`, {
       method: 'POST',
       body: JSON.stringify(barber),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${config.API_KEY}`,
+      },
+    }).then(res => {
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
+    });
+  },
+
+  getBarberById(id) {
+    return fetch(`${barberURL}/api/${id}`, {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${config.API_KEY}`,
+      },
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+  },
+  deleteBarber(id) {
+    return fetch(`${barberURL}/api/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-type': 'application/json',
+        Authorization: `Bearer ${config.API_KEY}`,
+      },
+    }).then(res => {
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
+    });
+  },
+  patchBarber(id, myKey) {
+    return fetch(`${barberURL}/api/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(myKey),
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${config.API_KEY}`,

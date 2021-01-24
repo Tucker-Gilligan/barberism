@@ -4,6 +4,7 @@ import AboutPage from '../../routes/AboutPage';
 import BarberListPage from '../../routes/BarberListPage';
 import RegisterNewBarber from '../../routes/RegisterNewBarber';
 import Nav from '../Nav/Nav';
+import BarberProfile from '../../routes/BarberProfile';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <main className="app__main">
         <Switch>
           <Route exact path={'/'} component={AboutPage} />
+          <Route path={`/barber-profile/:id`} component={BarberProfile} />
           <Route path={'/find-barber'} component={BarberListPage} />
           <Route path={'/register-barber'} component={RegisterNewBarber} />
         </Switch>

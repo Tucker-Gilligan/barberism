@@ -1,7 +1,11 @@
-.registration__form {
-  display: flex;
-  /* justify-content: center; */
-  /* align-content: center; */
+form {
+  align-items: left;
+}
+.registration__page {
+  /* display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left; */
 }
 
 .NewBarberForm {
@@ -11,36 +15,34 @@
   /* justify-content: center; */
   /* align-self: center; */
   margin: auto;
-  background-color: gray;
-  border-radius: 3px;
+  background-color: #263938;
+  border-radius: 6px;
   padding: 20px;
   box-shadow: inset 0 0 10px #000000;
-  color: rgb(235, 235, 235);
+  color: #fdeed2;
+  justify-content: flex-start;
   /* align-items: center; */
-}
-
-.enter_new_barber {
-  /* display: flex; */
-  flex-direction: column;
-  /* justify-content: space-around; */
-  /* align-items: right; */
-  margin: auto;
 }
 
 input {
   margin-bottom: 20px;
+  background-color: #fdeed2;
 }
 
-.select__field {
-  margin-bottom: 20px;
+input[type='text'],
+button {
+  width: 85%;
+  align-items: left;
+  margin: auto auto 20px auto;
+  height: 30px;
+  background-color: #fdeed2;
+  align-content: left;
 }
 
 input,
-select,
-button {
-  width: 100%;
-  margin: auto auto 20px auto;
-  height: 30px;
+button,
+select {
+  border-radius: 10px;
 }
 
 label {
@@ -55,3 +57,45 @@ label {
   text-align: right;
   margin-bottom: 10px;
 } */
+
+.service__selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 0;
+  margin: auto;
+  margin: 5px 0 20px 0;
+}
+
+.service__option {
+  display: flex;
+  flex-direction: row;
+}
+
+.Service__label {
+  font-size: 12px;
+  /* margin-bottom: 0; */
+}
+
+input[type='checkbox'] {
+  transform: scale(1);
+  margin: 0;
+  margin-right: 3px;
+}
+
+.select__field {
+  /* align-content: left; */
+  width: initial;
+  margin-bottom: 20px;
+  background-color: #fdeed2;
+}
+
+select {
+  width: 500px;
+  padding: 8px;
+}
+
+button {
+  width: 120px;
+  background-color: #fb9e55;
+}

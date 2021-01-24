@@ -55,9 +55,11 @@ export default class BarberListPage extends Component {
 
   renderBarbers() {
     const { barberList = [] } = this.context;
-    return barberList.map(barber => (
-      <BarberListItem key={barber.id} barber={barber} />
-    ));
+    console.log('barberList is', barberList);
+    return barberList.map(
+      // barber => console.log(barber.id)
+      barber => <BarberListItem key={barber.id} barber={barber} />
+    );
   }
 
   render() {
