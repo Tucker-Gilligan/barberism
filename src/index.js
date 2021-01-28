@@ -5,9 +5,10 @@ import App from './components/App/App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { BarberListProvider } from './contexts/BarberListContext';
 import { BarberProvider } from './contexts/BarberContext';
+import history from './history';
 
 ReactDOM.render(
-  <Router>
+  <Router history={history}>
     <BarberListProvider>
       <BarberProvider>
         <App />

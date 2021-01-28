@@ -48,6 +48,7 @@ const BarberListContext = React.createContext({
   setError: () => {},
   clearError: () => {},
   setBarberList: () => {},
+  removeFromBarberList: () => {},
 });
 export default BarberListContext;
 
@@ -71,6 +72,14 @@ export class BarberListProvider extends Component {
     this.setState({ error: null });
   };
 
+  removeFromBarberList = barber_id => {
+    this.setState({
+      barberList: this.state.barberList.filter(barber => {
+        return barber.barber_id !== barber_id;
+      }),
+    });
+  };
+
   render() {
     const value = {
       barberList: this.state.barberList,
@@ -78,6 +87,7 @@ export class BarberListProvider extends Component {
       setError: this.setError,
       clearError: this.clearError,
       setBarberList: this.setBarberList,
+      removeFromBarberList: this.removeFromBarberList,
     };
     return (
       <BarberListContext.Provider value={value}>

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/2?family=Fira+Sans:wght@200&family=Permanent+Marker&display=swap');
-
 .title__nav {
   margin-left: 30px;
 }
@@ -12,7 +10,7 @@
   flex-direction: row;
   justify-content: center;
   margin: 0px;
-  font-family: 'Fira Sans', sans-serif;
+
   font-family: 'Permanent Marker', cursive;
 }
 

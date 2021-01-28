@@ -2,6 +2,7 @@
 import React from 'react';
 
 export const nullBarber = {
+  barber_id: '',
   barber_name: '',
   barber_location: '',
   services: '',
@@ -36,7 +37,7 @@ export class BarberProvider extends React.Component {
   // }
 
   setError = error => {
-    console.error(error);
+    console.error('here is your error', error);
     this.setState({ error });
   };
 
@@ -60,7 +61,8 @@ export class BarberProvider extends React.Component {
   //   }
 
   clearBarber = () => {
-    this.setState({ nullBarber });
+    console.log('clear draft of single new barber we just added');
+    this.setState({ barber: nullBarber });
   };
 
   render() {

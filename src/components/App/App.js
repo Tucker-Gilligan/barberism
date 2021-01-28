@@ -1,10 +1,10 @@
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import AboutPage from '../../routes/AboutPage';
-import BarberListPage from '../../routes/BarberListPage';
-import RegisterNewBarber from '../../routes/RegisterNewBarber';
+import AboutPage from '../../routes/AboutPage/AboutPage';
+import BarberListPage from '../../routes/BarberListPage/BarberListPage';
+import RegisterNewBarber from '../../routes/RegisterNewBarber/RegisterNewBarber';
 import Nav from '../Nav/Nav';
-import BarberProfile from '../../routes/BarberProfile';
+import EditBarberPage from '../../routes/EditBarberPage/EditBarberPage';
 
 function App() {
   return (
@@ -15,9 +15,9 @@ function App() {
       <main className="app__main">
         <Switch>
           <Route exact path={'/'} component={AboutPage} />
-          <Route path={`/barber-profile/:id`} component={BarberProfile} />
           <Route path={'/find-barber'} component={BarberListPage} />
           <Route path={'/register-barber'} component={RegisterNewBarber} />
+          <Route path={'/edit-barber/:barber_id'} component={EditBarberPage} />
         </Switch>
       </main>
     </div>

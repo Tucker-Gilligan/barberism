@@ -16,28 +16,39 @@ const BarberApiService = {
       //res.json();
     });
   },
-  postNewBarber(barber_name, barber_location, services, phone_number, email) {
-    const barber = {
-      barber_name,
-      barber_location,
-      services,
-      phone_number,
-      email,
-    };
-    return fetch(`${barberURL}/api/`, {
+  // postNewBarber(barber_name, barber_location, services, phone_number, email) {
+  // const barber = {
+  //   barber_name,
+  //   barber_location,
+  //   services,
+  //   phone_number,
+  //   email,
+  // };
+  postNewBarber(barber) {
+    return fetch(`${barberURL}`, {
       method: 'POST',
       body: JSON.stringify(barber),
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${config.API_KEY}`,
       },
-    }).then(res => {
-      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
-    });
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
   },
-
+  getBarberByState(state) {
+    return fetch(`${barberURL}/${state}`, {
+      method: `GET`,
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${config.API_KEY}`,
+      },
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+  },
   getBarberById(id) {
-    return fetch(`${barberURL}/api/${id}`, {
+    return fetch(`${barberURL}/${id}`, {
       method: `GET`,
       headers: {
         'Content-Type': 'application/json',
@@ -48,20 +59,22 @@ const BarberApiService = {
     );
   },
   deleteBarber(id) {
-    return fetch(`${barberURL}/api/${id}`, {
+    return fetch(`${barberURL}/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json',
         Authorization: `Bearer ${config.API_KEY}`,
       },
     }).then(res => {
-      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
+      if (!res.ok) {
+        return res.json().then(e => Promise.reject(e));
+      }
     });
   },
-  patchBarber(id, myKey) {
-    return fetch(`${barberURL}/api/${id}`, {
+  patchBarber(barber, id) {
+    return fetch(`${barberURL}/${id}`, {
       method: 'PATCH',
-      body: JSON.stringify(myKey),
+      body: JSON.stringify(barber),
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${config.API_KEY}`,

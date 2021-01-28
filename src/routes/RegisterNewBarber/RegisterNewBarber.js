@@ -1,27 +1,54 @@
 import React, { Component } from 'react';
-import BarberContext from '../contexts/BarberContext';
-import BarberApiService from '../services/barber-api-service';
+import BarberContext from '../../contexts/BarberContext';
+import BarberApiService from '../../services/barber-api-service';
 // import { Section } from '../components/Utils/Utils';
 // import BarberListItem from '../components/BarberListItem/BarberListItem';
 import './RegisterNewBarber.css';
-
+import StateSelect from '../../components/StateSelect/StateSelect';
 export default class RegisterNewBarber extends Component {
   static contextType = BarberContext;
 
+  onRegisterBarberSuccess = () => {
+    this.props.history.goBack();
+  };
+
+  constructor(props) {
+    super(props);
+    console.log('constructor is running');
+    this.myRefs = {
+      sensory: React.createRef(),
+      scissor: React.createRef(),
+      longer_appointments: React.createRef(),
+      home_haircuts: React.createRef(),
+    };
+  }
+
   handleSubmit = evt => {
     evt.preventDefault();
-    console.log(evt.target);
-    // const { barber } = this.context;
 
-    BarberApiService.postNewBarber(
-      evt.target.barberName.value,
-      evt.target.barberLocation.value,
-      evt.target.services.value,
-      evt.target.phone.value,
-      evt.target.email.value
-    )
-      .then(res => this.context.setBarber(res))
-      .catch(this.context.setError);
+    const services = [];
+    console.log('this.refs', this.myRefs);
+    for (const key in this.myRefs) {
+      let ref = this.myRefs[key];
+      console.log('ref is', ref.current);
+      if (ref.current.checked) {
+        services.push(ref.current.value);
+      }
+    }
+
+    const barber = {
+      barber_name: evt.target.barber_name.value,
+      barber_location: evt.target.barber_location.value,
+      services: services,
+      phone_number: evt.target.phone_number.value,
+      email: evt.target.email.value,
+    };
+
+    BarberApiService.postNewBarber(barber)
+      .then(res => {
+        this.context.setBarber(res);
+      })
+      .catch(error => this.context.setError(error));
   };
 
   render() {
@@ -33,70 +60,19 @@ export default class RegisterNewBarber extends Component {
             <input
               type="text"
               id="name"
-              name="barberName"
+              name="barber_name"
               value={this.context.barber_name}
               placeholder="Joe Barber"
             />
-            <label htmlFor="location">Location</label>
+            <label htmlFor="barber_location">Location</label>
             <br />
             <select
-              id="location"
-              name="barberLocation"
+              id="barber_location"
+              name="barber_location"
               value={this.context.barber_location}
               className="select__field"
             >
-              <option value="">Select State</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="AR">Arkansas</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DE">Delaware</option>
-              <option value="DC">District Of Columbia</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="IA">Iowa</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="ME">Maine</option>
-              <option value="MD">Maryland</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MS">Mississippi</option>
-              <option value="MO">Missouri</option>
-              <option value="MT">Montana</option>
-              <option value="NE">Nebraska</option>
-              <option value="NV">Nevada</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NY">New York</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VT">Vermont</option>
-              <option value="VA">Virginia</option>
-              <option value="WA">Washington</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
+              <StateSelect />
             </select>
             <br />
             <label htmlFor="service__selection" className="Services__label">
@@ -114,6 +90,7 @@ export default class RegisterNewBarber extends Component {
               <li className="service__option">
                 <input
                   type="checkbox"
+                  ref={this.myRefs.sensory}
                   id="sensory"
                   name="services"
                   value="1"
@@ -126,8 +103,9 @@ export default class RegisterNewBarber extends Component {
               <li className="service__option">
                 <input
                   type="checkbox"
-                  id="scissor_cuts"
-                  name="services"
+                  ref={this.myRefs.scissor}
+                  id="scissors"
+                  name="scissors"
                   value="2"
                   className="select__field"
                 />
@@ -138,6 +116,7 @@ export default class RegisterNewBarber extends Component {
               <li className="service__option">
                 <input
                   type="checkbox"
+                  ref={this.myRefs.longer_appointments}
                   id="longer_appointments"
                   name="services"
                   value="3"
@@ -150,6 +129,7 @@ export default class RegisterNewBarber extends Component {
               <li className="service__option">
                 <input
                   type="checkbox"
+                  ref={this.myRefs.home_haircuts}
                   id="home_haircuts"
                   name="services"
                   value="4"
@@ -163,11 +143,11 @@ export default class RegisterNewBarber extends Component {
             {/* <option value="scissor_cuts">Scissor cuts</option>
               <option value="long_apt">Longer appointments </option> */}
             {/* </select> */}
-            <label htmlFor="phone">Phone Number</label>
+            <label htmlFor="phone_number">Phone Number</label>
             <input
               type="text"
-              id="phone"
-              name="phone"
+              id="phone_number"
+              name="phone_number"
               value={this.context.phone_number}
               placeholder="(xxx)xxx-xxxx"
             />
@@ -179,6 +159,19 @@ export default class RegisterNewBarber extends Component {
               value={this.context.email}
             />
           </div>
+
+          {/* {this.state.success ? (
+            <p
+              style={{ color: 'green', textAlign: 'center', fontSize: '20px' }}
+            >
+              Registering barber...
+            </p>
+          ) : (
+            this.state.error && (
+              <p style={{ color: 'red' }}>{this.state.error}</p>
+            )
+          )} */}
+
           <button type="submit">Post New Barber</button>
         </form>
       </div>
