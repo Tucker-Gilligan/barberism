@@ -37,7 +37,6 @@ export default class BarberListPage extends Component {
     console.log('result is', result);
     this.setState({ serviceSelected: true });
     setBarberList(result);
-    this.renderBarbers();
   };
 
   renderBarbers() {
