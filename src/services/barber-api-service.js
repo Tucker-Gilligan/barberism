@@ -12,18 +12,9 @@ const BarberApiService = {
       },
     }).then(res => {
       return !res.ok ? res.json().then(e => Promise.reject(e)) : res.json();
-      // .then(res => this.context.setBarberList(res))
-      //res.json();
     });
   },
-  // postNewBarber(barber_name, barber_location, services, phone_number, email) {
-  // const barber = {
-  //   barber_name,
-  //   barber_location,
-  //   services,
-  //   phone_number,
-  //   email,
-  // };
+
   postNewBarber(barber) {
     return fetch(`${barberURL}`, {
       method: 'POST',
@@ -37,7 +28,7 @@ const BarberApiService = {
     );
   },
   getBarberByState(state) {
-    return fetch(`${barberURL}/${state}`, {
+    return fetch(`${barberURL}/?state=${state}`, {
       method: `GET`,
       headers: {
         'Content-Type': 'application/json',
@@ -86,32 +77,3 @@ const BarberApiService = {
 };
 
 export default BarberApiService;
-// getBarbers(barberId) {
-//   return fetch(`${config.API_ENDPOINT}/barbers/${barberId}`, {
-//     headers: {
-//       'Content-Type': 'application/json',
-//       authorization: config.API_KEY,
-//     },
-//   }).then((res) =>
-//     !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-//   );
-// },
-// postNewBarber(name, location, website_url, description, phone, email) {
-//   return fetch(`${config.API_ENDPOINT}/barbers`, {
-//     method: 'POST',
-//     headers: {
-//       'content-type': 'application/json',
-//     },
-//     body: JSON.stringify({
-// name,
-// location,
-// website_url,
-// description,
-// phone,
-// email,
-//     }),
-//   }).then((res) =>
-//     !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
-//   );
-// },
-// };

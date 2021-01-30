@@ -127,3 +127,203 @@
               <option value="Wyoming">Wyoming</option>
             </select>
           </div>
+
+
+
+
+=======================ATTEMPT AT FUNCTIONAL COMPONENT W HOOKS IN BARBERLIST CONTEXT ==========
+// import React, { useState } from 'react';
+
+// const BarberListContext = React.createContext({
+//   barberList: [],
+//   error: null,
+//   setError: () => {},
+//   clearError: () => {},
+//   setBarberList: () => {},
+// });
+// export default BarberListContext;
+
+// export function BarberListProvider({ children }) {
+//   const [barberList, setBarberList] = useState([]);
+//   const [error, setError] = useState(null);
+
+//   const set_barber_list = barber => {
+//     setBarberList(barber);
+//   };
+
+//   const set_error = () => {
+//     console.error(error);
+//     setError(error);
+//   };
+
+//   const clear_error = () => {
+//     setError(null);
+//   };
+
+//   const value = {
+//     barberList: barberList,
+//     error: set_error,
+//     setError: set_error,
+//     clearError: clear_error,
+//     setBarberList: set_barber_list,
+//   };
+//   console.log(value);
+
+//   return (
+//     <BarberListContext.Provider value={value}>
+//       {children}
+//     </BarberListContext.Provider>
+//   );
+// }
+
+
+
+
+// handleEditBarber = evt => {
+//   const { setBarber } = this.context;
+//   const { barber } = this.context;
+//   evt.preventDefault();
+//   const barberToEdit = JSON.stringify({
+//     barber_name: this.context.barber.barber_name,
+//     barber_location: this.context.barber.barber_location,
+//     services: this.context.barber.services,
+//     phone_number: this.context.barber.phone_number,
+//     email: this.context.barber.email,
+//   });
+
+//   let param = this.props.match.params.barber_id;
+//   BarberApiService.patchBarber(
+//     evt.target.barber_name.value,
+//     evt.target.barber_location.value,
+//     services,
+//     evt.target.phone_number.value,
+//     evt.target.email.value
+//   )
+//     .then(res => this.context.setBarber(res))
+//     .catch(this.context.setError);
+// };
+
+
+
+
+
+
+
+
+===============From BarberListPage=============
+// constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     barberList: [],
+  //   };
+  // }
+
+  // componentDidMount() {
+  // const state = this.context.clearError();
+  // BarberApiService.getBarberByState()
+  //   .then(res => this.context.setBarberList(res))
+  //   .catch(this.context.setError);
+  // }
+
+
+
+  =======BarberApiService =========
+  // getBarbers(barberId) {
+//   return fetch(`${config.API_ENDPOINT}/barbers/${barberId}`, {
+//     headers: {
+//       'Content-Type': 'application/json',
+//       authorization: config.API_KEY,
+//     },
+//   }).then((res) =>
+//     !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+//   );
+// },
+// postNewBarber(name, location, website_url, description, phone, email) {
+//   return fetch(`${config.API_ENDPOINT}/barbers`, {
+//     method: 'POST',
+//     headers: {
+//       'content-type': 'application/json',
+//     },
+//     body: JSON.stringify({
+// name,
+// location,
+// website_url,
+// description,
+// phone,
+// email,
+//     }),
+//   }).then((res) =>
+//     !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
+//   );
+// },
+// };
+
+
+
+
+======EDIT BARBER PAGE =====
+{/* <div className="editField">
+          <label htmlFor="services">Select Services</label>
+          <ul className="service__selection" id="service__selection">
+            <li className="service__option">
+              <input
+                type="checkbox"
+                // ref={this.myRefs.sensory}
+                id="sensory"
+                name="sensory"
+                checked={this.state.sensory}
+                value="1"
+                className="select__field"
+                onChange={evt => this.handleCheckboxChange(evt)}
+              />
+              <label htmlFor="sensory_hours" className="Service__label">
+                Sensory Hours
+              </label>
+            </li>
+            <li className="service__option">
+              <input
+                type="checkbox"
+                // ref={this.myRefs.scissor}
+                id="scissors"
+                name="scissors"
+                checked={this.state.scissors}
+                value="2"
+                className="select__field"
+                onChange={evt => this.handleCheckboxChange(evt)}
+              />
+              <label htmlFor="sensory_hours" className="Service__label">
+                Scissor cuts
+              </label>
+            </li>
+            <li className="service__option">
+              <input
+                type="checkbox"
+                // ref={this.myRefs.longer_appointments}
+                id="longer_appointments"
+                name="longer_appointments"
+                checked={this.state.longer_appointments}
+                value="3"
+                className="select__field"
+                onChange={evt => this.handleCheckboxChange(evt)}
+              />
+              <label htmlFor="longer_appointments" className="Service__label">
+                Longer Appointments
+              </label>
+            </li>
+            <li className="service__option">
+              <input
+                type="checkbox"
+                // ref={this.myRefs.home_haircuts}
+                id="home_haircuts"
+                name="home_haircuts"
+                checked={this.state.home_haircuts}
+                value="4"
+                className="select__field"
+                onChange={evt => this.handleCheckboxChange(evt)}
+              />
+              <label htmlFor="home_haircuts" className="Service__label">
+                Home Haircuts
+              </label>
+            </li>
+          </ul>
+        </div> */}

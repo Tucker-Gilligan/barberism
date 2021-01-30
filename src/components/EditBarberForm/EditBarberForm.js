@@ -46,15 +46,8 @@ export default class EditBarberForm extends Component {
     this.setState({ [evt.target.name]: evt.target.value });
   };
 
-  // handleCheckboxChange = evt => {
-  //   this.setState({ touched: true });
-  //   this.setState({ [evt.target.name]: evt.target.checked });
-  // };
-
   handleEditBarber = evt => {
     evt.preventDefault();
-
-    //sensory 1 scissors 2 longer_appointments 3 home_haircuts 4
 
     const services = [];
     if (this.state.sensory === true) {
@@ -134,72 +127,6 @@ export default class EditBarberForm extends Component {
             <StateSelect />
           </select>
         </div>
-
-        {/* <div className="editField">
-          <label htmlFor="services">Select Services</label>
-          <ul className="service__selection" id="service__selection">
-            <li className="service__option">
-              <input
-                type="checkbox"
-                // ref={this.myRefs.sensory}
-                id="sensory"
-                name="sensory"
-                checked={this.state.sensory}
-                value="1"
-                className="select__field"
-                onChange={evt => this.handleCheckboxChange(evt)}
-              />
-              <label htmlFor="sensory_hours" className="Service__label">
-                Sensory Hours
-              </label>
-            </li>
-            <li className="service__option">
-              <input
-                type="checkbox"
-                // ref={this.myRefs.scissor}
-                id="scissors"
-                name="scissors"
-                checked={this.state.scissors}
-                value="2"
-                className="select__field"
-                onChange={evt => this.handleCheckboxChange(evt)}
-              />
-              <label htmlFor="sensory_hours" className="Service__label">
-                Scissor cuts
-              </label>
-            </li>
-            <li className="service__option">
-              <input
-                type="checkbox"
-                // ref={this.myRefs.longer_appointments}
-                id="longer_appointments"
-                name="longer_appointments"
-                checked={this.state.longer_appointments}
-                value="3"
-                className="select__field"
-                onChange={evt => this.handleCheckboxChange(evt)}
-              />
-              <label htmlFor="longer_appointments" className="Service__label">
-                Longer Appointments
-              </label>
-            </li>
-            <li className="service__option">
-              <input
-                type="checkbox"
-                // ref={this.myRefs.home_haircuts}
-                id="home_haircuts"
-                name="home_haircuts"
-                checked={this.state.home_haircuts}
-                value="4"
-                className="select__field"
-                onChange={evt => this.handleCheckboxChange(evt)}
-              />
-              <label htmlFor="home_haircuts" className="Service__label">
-                Home Haircuts
-              </label>
-            </li>
-          </ul>
-        </div> */}
 
         <div className="editField">
           <label htmlFor="phone_number">Phone Number</label>

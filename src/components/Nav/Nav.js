@@ -23,16 +23,6 @@ function Nav() {
             Register{' '}
           </Link>
         </li>
-        {/* <li className="route__link">
-        <Link className="nav__link" to="/customer">
-          Find Barber
-        </Link>
-      </li>
-      <li className="route__link">
-        <Link className="nav__link" to="/barbers">
-          Register Barber
-        </Link>
-      </li> */}
       </ul>
     </div>
   );

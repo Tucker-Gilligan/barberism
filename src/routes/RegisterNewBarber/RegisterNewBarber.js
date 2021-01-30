@@ -46,12 +46,18 @@ export default class RegisterNewBarber extends Component {
 
     BarberApiService.postNewBarber(barber)
       .then(res => {
-        this.context.setBarber(res);
+        this.context.clearError();
+        return this.context.setBarber(res);
+        // return <p>...submitting barber</p>;
       })
-      .catch(error => this.context.setError(error));
+      .catch(error => {
+        this.context.setError(error);
+        return <p>there was an error, {error}</p>;
+      });
   };
 
   render() {
+    const { error } = this.context;
     return (
       <div className="registration__page">
         <form className="NewBarberForm" onSubmit={this.handleSubmit}>
@@ -158,20 +164,9 @@ export default class RegisterNewBarber extends Component {
               name="email"
               value={this.context.email}
             />
+
+            {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>
-
-          {/* {this.state.success ? (
-            <p
-              style={{ color: 'green', textAlign: 'center', fontSize: '20px' }}
-            >
-              Registering barber...
-            </p>
-          ) : (
-            this.state.error && (
-              <p style={{ color: 'red' }}>{this.state.error}</p>
-            )
-          )} */}
-
           <button type="submit">Post New Barber</button>
         </form>
       </div>

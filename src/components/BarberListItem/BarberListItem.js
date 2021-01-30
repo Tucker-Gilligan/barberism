@@ -3,29 +3,6 @@ import BarberListContext from '../../contexts/BarberListContext';
 import BarberApiService from '../../services/barber-api-service';
 import { Link } from 'react-router-dom';
 
-// handleEditBarber = evt => {
-//   const { setBarber } = this.context;
-//   const { barber } = this.context;
-//   evt.preventDefault();
-//   const barberToEdit = JSON.stringify({
-//     barber_name: this.context.barber.barber_name,
-//     barber_location: this.context.barber.barber_location,
-//     services: this.context.barber.services,
-//     phone_number: this.context.barber.phone_number,
-//     email: this.context.barber.email,
-//   });
-
-//   let param = this.props.match.params.barber_id;
-//   BarberApiService.patchBarber(
-//     evt.target.barber_name.value,
-//     evt.target.barber_location.value,
-//     services,
-//     evt.target.phone_number.value,
-//     evt.target.email.value
-//   )
-//     .then(res => this.context.setBarber(res))
-//     .catch(this.context.setError);
-// };
 export default class BarberListItem extends Component {
   static contextType = BarberListContext;
 
@@ -77,17 +54,6 @@ export default class BarberListItem extends Component {
           Delete
         </button>
       </div>
-      // </Link>
     );
   }
 }
-
-// function truncate(text) {
-//   const words = text.split(' ');
-
-//   if (words.length > 10) {
-//     return words.slice(0, 10).join(' ') + ' ...';
-//   }
-
-//   return text;
-// }

@@ -8,23 +8,10 @@ import SearchOptions from '../../components/SearchOptions/SearchOptions';
 // import BarberContext from '../../contexts/BarberContext';
 export default class BarberListPage extends Component {
   static contextType = BarberListContext;
+
   state = {
     stateSelected: false,
   };
-
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     barberList: [],
-  //   };
-  // }
-
-  // componentDidMount() {
-  // const state = this.context.clearError();
-  // BarberApiService.getBarberByState()
-  //   .then(res => this.context.setBarberList(res))
-  //   .catch(this.context.setError);
-  // }
 
   handleSelectState = evt => {
     evt.preventDefault();
@@ -59,7 +46,6 @@ export default class BarberListPage extends Component {
               <p className="red">There was an error, try again</p>
             ) : (
               this.renderBarbers()
-              //this.renderBarbers()
             )}
           </Section>
         </div>
