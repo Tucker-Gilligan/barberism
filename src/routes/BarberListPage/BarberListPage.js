@@ -12,15 +12,24 @@ export default class BarberListPage extends Component {
   state = {
     stateSelected: false,
     serviceSelected: false,
+    barberListBeforeSelectService: [],
   };
 
   handleSelectState = evt => {
     evt.preventDefault();
+    const { barberList = [] } = this.context;
     const location = evt.target.value;
     BarberApiService.getBarberByState(location)
       .then(res => {
         this.setState({ stateSelected: true });
         this.context.setBarberList(res);
+        this.setState({
+          barberListBeforeSelectService: this.context.barberList,
+        });
+        console.log(
+          'original barberList is',
+          this.state.barberListBeforeSelectService
+        );
       })
       .catch(this.context.setError);
   };
@@ -28,15 +37,28 @@ export default class BarberListPage extends Component {
   handleSelectService = evt => {
     const { setBarberList } = this.context;
     const { barberList = [] } = this.context;
+    const { barberListBeforeSelectService } = this.state;
+    let newBarberList = [];
     evt.preventDefault();
-    // const service = evt.target;
-    console.log('evt target value', evt.target.value);
-    const result = barberList.find(({ services }) =>
-      services.includes(evt.target.value)
-    );
-    console.log('result is', result);
-    this.setState({ serviceSelected: true });
-    setBarberList(result);
+    if (this.state.serviceSelected === true) {
+      newBarberList = [];
+      const result = barberListBeforeSelectService.find(({ services }) =>
+        services.includes(evt.target.value)
+      );
+      newBarberList.push(result);
+    } else {
+      const result = barberList.find(({ services }) =>
+        services.includes(evt.target.value)
+      );
+      this.setState({ serviceSelected: true });
+      newBarberList.push(result);
+    }
+
+    if (evt.target.value === '') {
+      setBarberList(barberListBeforeSelectService);
+    } else {
+      setBarberList(newBarberList);
+    }
   };
 
   renderBarbers() {

@@ -32,7 +32,9 @@ class SearchOptions extends Component {
               <option value="">Select service</option>
               <option value="Sensory Hours">Sensory hours</option>
               <option value="Scissor Cuts">Scissor cuts</option>
-              <option value="Longer Appointments">Longer appointments </option>
+              <option value="Longer Appointment Times">
+                Longer appointments
+              </option>
               <option value="Home Haircuts">Home haircuts</option>
             </select>
           </div>
