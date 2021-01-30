@@ -11,6 +11,7 @@ export default class BarberListPage extends Component {
 
   state = {
     stateSelected: false,
+    serviceSelected: false,
   };
 
   handleSelectState = evt => {
@@ -22,6 +23,21 @@ export default class BarberListPage extends Component {
         this.context.setBarberList(res);
       })
       .catch(this.context.setError);
+  };
+
+  handleSelectService = evt => {
+    const { setBarberList } = this.context;
+    const { barberList = [] } = this.context;
+    evt.preventDefault();
+    // const service = evt.target;
+    console.log('evt target value', evt.target.value);
+    const result = barberList.find(({ services }) =>
+      services.includes(evt.target.value)
+    );
+    console.log('result is', result);
+    this.setState({ serviceSelected: true });
+    setBarberList(result);
+    this.renderBarbers();
   };
 
   renderBarbers() {
@@ -39,7 +55,10 @@ export default class BarberListPage extends Component {
     const { error } = this.context;
     return (
       <div>
-        <SearchOptions handleSelectState={this.handleSelectState} />
+        <SearchOptions
+          handleSelectState={this.handleSelectState}
+          handleSelectService={this.handleSelectService}
+        />
         <div>
           <Section list className="BarberListPage">
             {error ? (

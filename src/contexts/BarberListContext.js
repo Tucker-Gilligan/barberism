@@ -16,7 +16,6 @@ export class BarberListProvider extends Component {
   };
 
   setBarberList = barberList => {
-    console.log('set barber list firing', barberList);
     this.setState({ barberList });
   };
 

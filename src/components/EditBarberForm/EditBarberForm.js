@@ -66,15 +66,6 @@ export default class EditBarberForm extends Component {
       services.push(4);
     }
 
-    // console.log('this.refs', this.myRefs);
-    // for (const key in this.myRefs) {
-    //   let ref = this.myRefs[key];
-    //   console.log('ref is', ref.current);
-    //   if (ref.current.checked) {
-    //     services.push(ref.current.value);
-    //   }
-    // }
-
     const barber = {
       barber_name: this.state.barber_name,
       barber_location: this.state.barber_location,

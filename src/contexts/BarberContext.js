@@ -61,7 +61,6 @@ export class BarberProvider extends React.Component {
   //   }
 
   clearBarber = () => {
-    console.log('clear draft of single new barber we just added');
     this.setState({ barber: nullBarber });
   };
 
