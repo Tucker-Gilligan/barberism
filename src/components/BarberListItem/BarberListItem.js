@@ -18,8 +18,6 @@ export default class BarberListItem extends Component {
 
   render() {
     const { barber } = this.props;
-    // const { handleDeleteBarber } = this.props;
-    // const { key } = this.props;
     return (
       // <Link to={`/barber-profile/${key}`} className="BarberListItem">
       <div className="BarberListItem__details" value={barber.barber_id}>

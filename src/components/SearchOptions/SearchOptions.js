@@ -4,7 +4,7 @@ import StateSelect from '../StateSelect/StateSelect';
 
 class SearchOptions extends Component {
   render() {
-    const { handleSelectState, handleSelectService } = this.props;
+    const { handleSelectState } = this.props;
     return (
       <div className="search__page">
         <form className="search__bar" onChange={handleSelectState}>
@@ -17,25 +17,6 @@ class SearchOptions extends Component {
               form="search__bar"
             >
               <StateSelect />
-            </select>
-          </div>
-        </form>
-        <form className="service__select" onChange={handleSelectService}>
-          <div className="select__services search__items">
-            <label htmlFor="select__services">Filter by Service</label>
-            <select
-              name="services"
-              id="select__services"
-              className="service__dropdown"
-              form="search__bar"
-            >
-              <option value="">Select service</option>
-              <option value="Sensory Hours">Sensory hours</option>
-              <option value="Scissor Cuts">Scissor cuts</option>
-              <option value="Longer Appointment Times">
-                Longer appointments
-              </option>
-              <option value="Home Haircuts">Home haircuts</option>
             </select>
           </div>
         </form>

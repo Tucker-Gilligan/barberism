@@ -20,7 +20,7 @@ function Nav() {
         </li>
         <li className="route__link">
           <Link className="nav__link" to="/register-barber">
-            Register{' '}
+            Register
           </Link>
         </li>
       </ul>
