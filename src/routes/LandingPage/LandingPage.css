@@ -1,0 +1,39 @@
+.Landing__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  color: #3c403d;
+}
+
+.Landing__page h2 {
+  text-align: center;
+  margin: 0 auto auto 5px;
+}
+
+.Landing__page h3 {
+  text-align: center;
+}
+
+.Landing__page span {
+  font-size: 150%;
+}
+
+.Landing__page h4 {
+  margin: auto;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.get__started__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: initial;
+}
+
+.get__started__links a {
+  font-size: 70%;
+  border: solid 1px;
+  padding: 5px;
+}

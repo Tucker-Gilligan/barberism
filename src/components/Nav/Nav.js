@@ -9,6 +9,11 @@ function Nav() {
       </div>
       <ul className="nav__links">
         <li className="route__link">
+          <Link className="nav__link" to="/">
+            Home
+          </Link>
+        </li>
+        <li className="route__link">
           <Link className="nav__link" to="/locate-barber">
             Locate
           </Link>

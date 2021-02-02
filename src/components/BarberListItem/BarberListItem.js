@@ -10,9 +10,7 @@ export default class BarberListItem extends Component {
     const { removeFromBarberList } = this.context;
 
     BarberApiService.deleteBarber(barber_id)
-      .then(res => {
-        removeFromBarberList(barber_id);
-      })
+      .then(res => removeFromBarberList(barber_id))
       .catch(this.context.setError);
   };
 

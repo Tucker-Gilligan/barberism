@@ -13,7 +13,7 @@ export default class EditBarberForm extends Component {
     email: '',
   };
 
-  componentDidMount() {
+  componentDidMount = () => {
     BarberApiService.getBarberById(this.props.match.params.barber_id).then(
       barber => {
         this.setState({
@@ -24,11 +24,12 @@ export default class EditBarberForm extends Component {
         });
       }
     );
-  }
+  };
 
   handleFormChange = evt => {
     this.setState({ touched: true });
     this.setState({ [evt.target.name]: evt.target.value });
+    console.log(evt.target.value);
   };
 
   handleEditBarber = evt => {
