@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import BarberListItem from './BarberListItem';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('EditGiftPage component', () => {
+describe('BarberListItem component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(

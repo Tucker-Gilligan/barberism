@@ -4,12 +4,12 @@ import ReactDOM from 'react-dom';
 import AboutPage from './AboutPage';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('EditGiftPage component', () => {
+describe('AboutPage component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <Route path={'/'} component={AboutPage} />
+        <Route path={'/about'} component={AboutPage} />
       </BrowserRouter>,
       div
     );

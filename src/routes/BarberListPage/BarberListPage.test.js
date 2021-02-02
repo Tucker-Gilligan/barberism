@@ -12,7 +12,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 //   ReactDOM.unmountComponentAtNode(div);
 // });
 
-describe('EditGiftPage component', () => {
+describe('BarberListPage component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(

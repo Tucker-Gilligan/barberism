@@ -5,9 +5,9 @@ function AboutPage() {
     <div className="about">
       <h3>About Barberism</h3>
       <p>
-        Barberism was created with the goal of connecting individuals with
+        Barberism was created with the goal of connecting people who have
         individualized needs, such as those with sensory-processing or Autism
-        spectrum disorders, with barbers who are prepared, willing, and trained
+        Spectrum Disorder, with barbers who are prepared, willing, and trained
         to meet those needs.
       </p>
 

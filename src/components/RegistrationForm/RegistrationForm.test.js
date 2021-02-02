@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import EditBarberPage from './EditBarberPage';
+import RegistrationForm from './RegistrationForm';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('EditBarberPage component', () => {
+describe('Nav component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <Route path={'/edit-barber'} component={EditBarberPage} />
+        <Route path={'/register-barber'} component={RegistrationForm} />
       </BrowserRouter>,
       div
     );

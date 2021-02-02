@@ -29,6 +29,7 @@ function Nav() {
           </Link>
         </li>
       </ul>
+      <hr />
     </div>
   );
 }

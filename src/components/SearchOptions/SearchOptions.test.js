@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import SearchOptions from './SearchOptions';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-describe('EditGiftPage component', () => {
+describe('SearchOptions component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(

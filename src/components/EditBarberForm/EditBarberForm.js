@@ -57,8 +57,13 @@ export default class EditBarberForm extends Component {
       content = <p>something went wrong, please try again</p>;
     }
     return (
-      <div>
-        <button onClick={() => this.props.history.goBack()}>Back</button>
+      <div className="edit__barber__form">
+        <button
+          className="edit__form__back"
+          onClick={() => this.props.history.goBack()}
+        >
+          Back
+        </button>
         <form id="edit_barber" onSubmit={evt => this.handleEditBarber(evt)}>
           <div className="editField">
             <label htmlFor="barber_name">Barber Name:</label>
