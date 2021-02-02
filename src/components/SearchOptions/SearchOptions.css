@@ -15,28 +15,29 @@
   flex-direction: column;
 }
 
+.search__by__state label {
+  color: #3c403d;
+  font-size: 14px;
+}
+
 label {
   font-size: 12px;
   text-align: center;
 }
 
 .state__dropdown {
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 5px;
   border-radius: 10px;
-  background-color: #263938;
+  background-color: #3c403d;
   color: #fdeed2;
   font-size: 12px;
   width: 120px;
 }
 
 .service__dropdown {
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
   display: flex;
   flex-direction: column;
   justify-content: center;

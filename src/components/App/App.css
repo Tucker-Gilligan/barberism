@@ -1,3 +1,20 @@
 .App {
-  background-color: #58828a;
+  background-color: #daded4;
+  height: 96.5vh;
+  padding-bottom: 10px;
+  margin-bottom: auto;
+}
+
+hr {
+  width: 75%;
+  margin: 2px auto 15px auto;
+  background-color: white;
+  filter: drop-shadow(0.1rem 0.1rem 0.1rem red(0, 0, 0));
+}
+
+main {
+  height: fixed;
+  padding-bottom: 5px;
+  margin-bottom: 2px;
+  background-color: #daded4;
 }

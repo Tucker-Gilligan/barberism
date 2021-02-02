@@ -12,10 +12,11 @@ function App() {
       <div>
         <Nav />
       </div>
+      <hr />
       <main className="app__main">
         <Switch>
-          <Route exact path={'/'} component={AboutPage} />
-          <Route path={'/find-barber'} component={BarberListPage} />
+          <Route exact path={'/about'} component={AboutPage} />
+          <Route path={'/locate-barber'} component={BarberListPage} />
           <Route path={'/register-barber'} component={RegisterNewBarber} />
           <Route path={'/edit-barber/:barber_id'} component={EditBarberPage} />
         </Switch>

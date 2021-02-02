@@ -9,18 +9,18 @@ function Nav() {
       </div>
       <ul className="nav__links">
         <li className="route__link">
-          <Link className="nav__link" to="/">
-            About
-          </Link>
-        </li>
-        <li className="route__link">
-          <Link className="nav__link" to="/find-barber">
-            Find
+          <Link className="nav__link" to="/locate-barber">
+            Locate
           </Link>
         </li>
         <li className="route__link">
           <Link className="nav__link" to="/register-barber">
             Register
+          </Link>
+        </li>
+        <li className="route__link">
+          <Link className="nav__link" to="/about">
+            About
           </Link>
         </li>
       </ul>

@@ -8,7 +8,7 @@ describe('ServiceOption component', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <Route path={'/find-barber'} component={StateSelect} />
+        <Route path={'/locate-barber'} component={StateSelect} />
       </BrowserRouter>,
       div
     );

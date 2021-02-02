@@ -8,7 +8,7 @@ export default class BarberListItem extends Component {
 
   handleDeleteBarber = barber_id => {
     const { removeFromBarberList } = this.context;
-    console.log(barber_id);
+
     BarberApiService.deleteBarber(barber_id)
       .then(res => {
         removeFromBarberList(barber_id);
@@ -19,12 +19,11 @@ export default class BarberListItem extends Component {
   render() {
     const { barber } = this.props;
     return (
-      // <Link to={`/barber-profile/${key}`} className="BarberListItem">
       <div className="BarberListItem__details" value={barber.barber_id}>
         <h2 className="BarberListItem__heading" value={barber.barber_name}>
           {barber.barber_name}
         </h2>
-        <h3 className="Services__label">Services Offered</h3>
+        <h3 className="Services__label">Services</h3>
         <p className="BarberListItem__services" value={barber.services}>
           {barber.services}
         </p>

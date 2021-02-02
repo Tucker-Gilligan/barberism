@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px 10px 20px;
+  margin-top: 0px;
+  color: #3c403d;
+}
+
+.about h3 {
+  margin: 0 auto 10px auto;
+  font-style: italic;
+}
+.about p {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 0px;
+  line-height: 1.5em;
+}
+
+.about li {
+  text-align: left;
+}
+
+.about ul {
+  padding-left: 20px;
+  margin-top: 0;
+  font-size: 14px;
+}

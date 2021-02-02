@@ -28,37 +28,17 @@ export class BarberProvider extends React.Component {
     barber: nullBarber,
   };
 
-  //   const [error, setError] = useState(null);
-  //   const [isLoaded, setIsLoaded] = useState(false);
-  //   const [barber, setBarber] = useState([]);
-
-  //   const setError = () => {
-  //     setError(error)
-  // }
-
   setError = error => {
-    console.error('here is your error', error);
     this.setState({ error });
   };
 
-  // const clearError = () => {
-  //     setError(null)
-  // }
   clearError = () => {
     this.setState({ error: null });
   };
 
-  //   const setBarber = (barber) => {
-  //       setBarber(barber)
-  //   }
-
   setBarber = barber => {
     this.setState({ barber });
   };
-
-  //   const clearBarber = () => {
-  //       setBarber(nullBarber)
-  //   }
 
   clearBarber = () => {
     this.setState({ barber: nullBarber });

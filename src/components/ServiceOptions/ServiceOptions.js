@@ -1,24 +1,13 @@
 import React, { Component } from 'react';
 
 export default class ServiceOptions extends Component {
-  constructor(props) {
-    super(props);
-    console.log('constructor is running');
-    this.myRefs = {
-      sensory: React.createRef(),
-      scissor: React.createRef(),
-      longer_appointments: React.createRef(),
-      home_haircuts: React.createRef(),
-    };
-  }
-
   render() {
     return (
       <ul className="service__selection" id="service__selection">
         <li className="service__option">
           <input
             type="checkbox"
-            ref={this.myRefs.sensory}
+            ref={this.props.myRefs.sensory}
             id="sensory"
             name="services"
             value="1"
@@ -31,7 +20,7 @@ export default class ServiceOptions extends Component {
         <li className="service__option">
           <input
             type="checkbox"
-            ref={this.myRefs.scissor}
+            ref={this.props.myRefs.scissor}
             id="scissors"
             name="scissors"
             value="2"
@@ -44,7 +33,7 @@ export default class ServiceOptions extends Component {
         <li className="service__option">
           <input
             type="checkbox"
-            ref={this.myRefs.longer_appointments}
+            ref={this.props.myRefs.longer_appointments}
             id="longer_appointments"
             name="services"
             value="3"
@@ -57,7 +46,7 @@ export default class ServiceOptions extends Component {
         <li className="service__option">
           <input
             type="checkbox"
-            ref={this.myRefs.home_haircuts}
+            ref={this.props.myRefs.home_haircuts}
             id="home_haircuts"
             name="services"
             value="4"

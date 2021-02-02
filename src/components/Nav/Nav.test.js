@@ -8,7 +8,7 @@ describe('EditGiftPage component', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <BrowserRouter>
-        <Route path={'/find-barber'} component={Nav} />
+        <Route path={'/locate-barber'} component={Nav} />
         <Route path={'/'} component={Nav} />
       </BrowserRouter>,
       div

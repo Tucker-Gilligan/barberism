@@ -14,9 +14,15 @@ export default class BarberListPage extends Component {
     stateSelected: false,
   };
 
+  componentDidMount() {
+    this.context.clearError();
+    BarberApiService.getBarbers()
+      .then(res => this.context.setBarberList(res))
+      .catch(this.context.setError);
+  }
+
   handleSelectState = evt => {
     evt.preventDefault();
-    const { barberList = [] } = this.context;
     const location = evt.target.value;
     BarberApiService.getBarberByState(location)
       .then(res => {
@@ -28,10 +34,14 @@ export default class BarberListPage extends Component {
 
   renderBarbers() {
     const { barberList = [] } = this.context;
-    if (!this.state.stateSelected) {
-      return <p>You must select a state</p>;
+    if (barberList.length === 0) {
+      return (
+        <p>
+          Sorry, it looks like there are no barbers registered in this location.
+        </p>
+      );
     }
-    console.log('barberList is', barberList);
+
     return barberList.map(barber => (
       <BarberListItem key={barber.barber_id} barber={barber} />
     ));

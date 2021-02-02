@@ -1,27 +1,18 @@
 form {
   align-items: left;
 }
-.registration__page {
-  /* display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left; */
-}
 
 .NewBarberForm {
   display: flex;
   flex-direction: column;
   width: 75%;
-  /* justify-content: center; */
-  /* align-self: center; */
   margin: auto;
-  background-color: #263938;
+  background-color: #3c403d;
   border-radius: 6px;
   padding: 20px;
   box-shadow: inset 0 0 10px #000000;
-  color: #fdeed2;
+  color: #daded4;
   justify-content: flex-start;
-  /* align-items: center; */
 }
 
 input {
@@ -32,7 +23,6 @@ input {
 input[type='text'],
 button {
   width: 85%;
-  align-items: left;
   margin: auto auto 20px auto;
   height: 30px;
   background-color: #fdeed2;
@@ -45,18 +35,11 @@ select {
   border-radius: 10px;
 }
 
+.NewBarberForm,
 label {
   margin-bottom: 10px;
   font-size: 16px;
 }
-
-/* .field__label {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  text-align: right;
-  margin-bottom: 10px;
-} */
 
 .service__selection {
   display: flex;
@@ -74,28 +57,36 @@ label {
 
 .Service__label {
   font-size: 12px;
-  /* margin-bottom: 0; */
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 input[type='checkbox'] {
   transform: scale(1);
-  margin: 0;
-  margin-right: 3px;
+  margin: 3px 3px 0 0;
 }
 
 .select__field {
-  /* align-content: left; */
   width: initial;
   margin-bottom: 20px;
-  background-color: #fdeed2;
 }
 
 select {
   width: 500px;
   padding: 8px;
+  background-color: #fdeed2;
 }
 
 button {
   width: 120px;
-  background-color: #fb9e55;
+  border: solid 2px;
+  border-color: #daded4;
+}
+
+.editButton {
+  margin-top: 20px;
+}
+
+.BarberListItem__details a {
+  margin-left: 0;
 }

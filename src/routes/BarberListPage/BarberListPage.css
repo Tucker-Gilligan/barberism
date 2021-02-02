@@ -7,10 +7,10 @@
   filter: drop-shadow(0 0.1rem 0.2rem rgb(0, 0, 0));
   border: none;
   border-radius: 5px;
-  background-color: #263938;
+  background-color: #3c403d;
   padding: 20px;
-  text-align: center;
-  color: #fdeed2;
+  text-align: left;
+  color: #daded4;
 
   /* align-items: center; */
 }
@@ -18,6 +18,7 @@
 .BarberListItem__description {
   padding-left: 0;
   margin-right: 0;
+  margin-bottom: 8px;
   text-align: right;
   list-style: none;
   overflow-wrap: break-word;
@@ -25,10 +26,17 @@
 
 .BarberListItem__heading {
   margin: auto;
-  margin-left: 0;
-  text-align: left;
+  margin-bottom: 10px;
 }
 
 .BarberListItem__services {
   margin-top: 0px;
+}
+
+.deleteButton {
+  margin-left: 0px;
+}
+
+.Services__label {
+  margin-bottom: 0px;
 }
