@@ -6,9 +6,7 @@ export default function LandingPage() {
       <h2>
         Welcome to <span>Barberism</span>
       </h2>
-      <h3>
-        Connecting you to barbers willing to meet your individualized needs.
-      </h3>
+      <h3>Connecting you to barbers to meet your individualized needs.</h3>
       <h4>Get Started</h4>
       <div className="get__started__links">
         <div>
