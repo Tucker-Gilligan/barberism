@@ -12,7 +12,6 @@ export default function LandingPage() {
         <div>
           <Link to="/locate-barber">Locate a Barber</Link>
         </div>
-        <br />
         <div>
           <Link to="/register-barber">Register a Barber</Link>
         </div>
