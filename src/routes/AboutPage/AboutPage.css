@@ -3,7 +3,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 0 20px 10px 20px;
-  margin-top: 0px;
+  margin: 0 10px;
   color: #3c403d;
 }
 
@@ -23,7 +23,16 @@
 }
 
 .about ul {
-  padding-left: 20px;
+  /* padding-left: 20px; */
   margin-top: 0;
   font-size: 14px;
+}
+
+@media (min-width: 568px) {
+  .about p {
+    font-size: 1rem;
+  }
+  .about ul {
+    font-size: 1rem;
+  }
 }
