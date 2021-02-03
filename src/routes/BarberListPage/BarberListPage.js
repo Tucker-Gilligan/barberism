@@ -12,12 +12,16 @@ export default class BarberListPage extends Component {
 
   state = {
     stateSelected: false,
+    isLoading: true,
   };
 
   componentDidMount() {
     this.context.clearError();
     BarberApiService.getBarbers()
-      .then(res => this.context.setBarberList(res))
+      .then(res => {
+        this.context.setBarberList(res);
+        this.setState({ isLoading: false });
+      })
       .catch(this.context.setError);
   }
 
@@ -26,15 +30,17 @@ export default class BarberListPage extends Component {
     const location = evt.target.value;
     BarberApiService.getBarberByState(location)
       .then(res => {
+        this.setState({ isLoading: true });
         this.setState({ stateSelected: true });
         this.context.setBarberList(res);
+        this.setState({ isLoading: false });
       })
       .catch(this.context.setError);
   };
 
   renderBarbers() {
     const { barberList = [] } = this.context;
-    if (barberList.length === 0) {
+    if (barberList.length === 0 && this.state.isLoading === false) {
       return (
         <p>
           Sorry, it looks like there are no barbers registered in this location.
