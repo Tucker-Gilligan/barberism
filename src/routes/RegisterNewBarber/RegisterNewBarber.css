@@ -41,6 +41,10 @@ select {
   border-radius: 10px;
 }
 
+#barber_location {
+  font-size: 50px;
+}
+
 .NewBarberForm,
 label {
   margin-bottom: 10px;

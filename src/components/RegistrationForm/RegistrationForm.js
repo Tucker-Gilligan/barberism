@@ -19,7 +19,6 @@ export default class RegistrationForm extends Component {
               required
             />
             <label htmlFor="barber_location">Location</label>
-            <br />
             <select
               id="barber_location"
               name="barber_location"
@@ -29,7 +28,7 @@ export default class RegistrationForm extends Component {
             >
               <StateSelect />
             </select>
-            <br />
+            <label for="service__selection">Services Provided</label>
             <ServiceOptions myRefs={myRefs} />
             <label htmlFor="phone_number">Phone Number</label>
             <input

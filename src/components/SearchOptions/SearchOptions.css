@@ -35,9 +35,10 @@ label {
   color: #fdeed2;
   font-size: 12px;
   width: 120px;
+  font-size: 50px;
 }
 
-.service__dropdown {
+/* .service__dropdown {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,4 +48,4 @@ label {
   color: #fdeed2;
   font-size: 12px;
   width: 120px;
-}
+} */
