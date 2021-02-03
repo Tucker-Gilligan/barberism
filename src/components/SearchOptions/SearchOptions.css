@@ -35,8 +35,15 @@ label {
   color: #fdeed2;
   font-size: 12px;
   width: 120px;
-  font-size: 50px;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+    background: #fdeed2;
+  }
 
 /* .service__dropdown {
   display: flex;
