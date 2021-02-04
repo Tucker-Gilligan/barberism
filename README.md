@@ -11,14 +11,35 @@ Barberism is an app where these people can connect with barbers who are willing 
 
 No more cold calling or trial and error. Barberism starts the conversation to create the perfect match.
 
-#### In its current state, Barberism allows users to
-* GET a list of all barbers including their services
-* GET a list of all barbers including their services while querying by state
-* CREATE a new barber, as well as selecting the services they provide.
-* EDIT current barbers to update their demographic or contact information.
-* DELETE current barbers.
+#### User Stories
+
+* Users start on a landing page, which provides the option to register a barber or locate a barber.
+<img width="1786" alt="LandingPage" src="https://user-images.githubusercontent.com/72029209/106841429-1931da80-6670-11eb-8256-c27cf97f0764.png">
+
+
+* Users can get a list of all barbers including their services
+* Users can delete current barbers.
+<img width="1791" alt="barberListPage" src="https://user-images.githubusercontent.com/72029209/106841010-3fa34600-666f-11eb-93ff-d59b8ce67d5a.png">
+
+
+* Users can get a list of all barbers including their services while querying by state
+<img width="1782" alt="SearchByState" src="https://user-images.githubusercontent.com/72029209/106841009-3f0aaf80-666f-11eb-8f9d-a23504899cb1.png">
+
+
+
+* Users can create a new barber, as well as selecting the services they provide.
+![RegisterBarberPage](https://user-images.githubusercontent.com/72029209/106841350-f1427700-666f-11eb-95de-e442ab629cf5.png)
+
+
+* Users can update current barbers to update their demographic or contact information.
+<img width="1788" alt="EditPage" src="https://user-images.githubusercontent.com/72029209/106841006-3e721900-666f-11eb-8829-b9186a354dac.png">
+
+
+<img width="1790" alt="About Page" src="https://user-images.githubusercontent.com/72029209/106841007-3f0aaf80-666f-11eb-987a-2ba743b218b0.png">
 
 
 ## Technology used
 * Client: ReactJS, CSS
 * API: Node.js, Express, PostgreSQL
+
+
