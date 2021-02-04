@@ -5,7 +5,6 @@ import { Section } from '../../components/Utils/Utils';
 import BarberListItem from '../../components/BarberListItem/BarberListItem';
 import './BarberListPage.css';
 import SearchOptions from '../../components/SearchOptions/SearchOptions';
-// import BarberContext from '../../contexts/BarberContext';
 
 export default class BarberListPage extends Component {
   static contextType = BarberListContext;

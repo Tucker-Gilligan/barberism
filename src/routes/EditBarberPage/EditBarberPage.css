@@ -22,10 +22,7 @@
 .editField {
   display: flex;
   flex-direction: column;
-  /* justify-content: left; */
   align-items: left;
-  /* text-align: left; */
-  /* align-self: left; */
   margin-left: 0;
 }
 
