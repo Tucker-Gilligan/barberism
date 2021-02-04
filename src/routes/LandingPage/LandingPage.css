@@ -49,6 +49,16 @@
   /* flex-wrap: initial; */
 }
 
+.get__started__links a:link,
+.get__started__links a:visited {
+  color: #3c403d;
+}
+
+.get__started__links a:active {
+  background-color: #3c403d;
+  color: #daded4;
+}
+
 /* .get__started__links {
   display: flex;
   flex-direction: row;
@@ -75,15 +85,12 @@
     text-align: center;
     margin: 0 auto;
   }
-  .get__started__links {
-    /* justify-content: space-evenly; */
-  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .Landing__page h2 {
-    margin: 200px auto 100px auto;
+    margin: 100px auto 100px auto;
     display: flex;
     flex-direction: column;
     font-size: 200%;

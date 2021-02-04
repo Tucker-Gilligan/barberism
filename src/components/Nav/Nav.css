@@ -57,19 +57,19 @@ a {
   margin: auto;
 }
 
-a:visited,
-a:link {
+.nav__links a:link,
+.nav__links a:visited {
   text-decoration: none;
   color: #3c403d;
 }
 
-a:hover {
-  border: solid 1px;
+.nav__links a:active {
+  background-color: #3c403d;
+  color: #daded4;
 }
-
-a:active {
+/* a:active {
   color: #3c403d;
-}
+} */
 
 @media (min-width: 568px) {
   a {

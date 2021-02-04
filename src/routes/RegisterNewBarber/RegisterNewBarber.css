@@ -23,7 +23,7 @@ form {
 
 input {
   margin-bottom: 20px;
-  background-color: #fdeed2;
+  background-color: #daded4;
 }
 
 input[type='text'],
@@ -31,7 +31,7 @@ button {
   width: 85%;
   margin: auto auto 20px 0;
   height: 30px;
-  background-color: #fdeed2;
+  background-color: #daded4;
   align-content: left;
 }
 
@@ -39,6 +39,11 @@ input,
 button,
 select {
   border-radius: 10px;
+}
+
+.NewBarberForm button:active {
+  background-color: #3c403d;
+  color: #daded4;
 }
 
 .NewBarberForm,
@@ -80,7 +85,7 @@ input[type='checkbox'] {
 select {
   width: 500px;
   padding: 8px;
-  background-color: #fdeed2;
+  background-color: #daded4;
 }
 
 button {
@@ -101,6 +106,6 @@ button {
   select,
   input {
     font-size: 16px;
-    background: #fdeed2;
+    background: #daded4;
   }
 }

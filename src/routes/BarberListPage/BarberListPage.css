@@ -37,6 +37,11 @@
   margin-left: 0px;
 }
 
+.BarberListItem__details button:active {
+  background-color: #3c403d;
+  color: #daded4;
+}
+
 .Services__label {
   margin-bottom: 0px;
 }

@@ -16,7 +16,7 @@
   margin-bottom: 20px;
   width: 88%;
   padding: 8px;
-  background-color: #fdeed2;
+  background-color: #daded4;
 }
 
 .editField {
@@ -45,4 +45,9 @@
 .edit__form__back {
   align-items: right;
   margin-left: 0;
+}
+
+.edit__barber__form button:active {
+  background-color: #3c403d;
+  color: #daded4;
 }
