@@ -8,3 +8,8 @@ body {
   margin: 5px;
   margin-bottom: 0px;
 }
+
+button,
+select {
+  cursor: pointer;
+}
