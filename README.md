@@ -6,4 +6,4 @@ Barberism is an app where these people can connect with barbers who are willing 
 
 No more cold calling or trial and error. Barberism starts the conversation to create the perfect match.
 
-Currently
+Live App: https://barberism-client.vercel.app/
