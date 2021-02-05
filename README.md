@@ -2,7 +2,7 @@
 
 ## Live Deployment
 
-https://barberism-client.vercel.app/
+https://barberism.vercel.app/
 
 ## Summary
 
