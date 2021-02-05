@@ -21,7 +21,6 @@
 }
 
 .Landing__page h4 {
-  /* margin: 30px auto; */
   margin: auto;
   margin-bottom: 15px;
   text-align: center;
@@ -45,33 +44,21 @@
 .get__started__links {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  /* flex-wrap: initial; */
 }
 
-.get__started__links a:link,
 .get__started__links a:visited {
   color: #3c403d;
 }
 
-.get__started__link:hover,
-.get__started__link:hover a {
+.get__started__link:hover {
   background-color: #3c403d;
   color: #daded4;
   cursor: pointer;
 }
 
-/* .get__started__links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: initial;
-} */
-
-.get__started__links a {
+.get__started__link p {
   font-size: 60%;
-  /* border: solid 1px; */
-  /* padding: 5px; */
+  margin: 9% auto;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -112,13 +99,6 @@
     text-align: center;
     font-size: 150%;
   }
-  /* .get__started__links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 100px 20px 100px;
-    flex-wrap: initial;
-  } */
 
   .get__started__link {
     width: 15rem;
@@ -126,8 +106,9 @@
     font-size: 1.6rem;
     padding-top: 0.6rem;
   }
-  .get__started__links a {
+  .get__started__link p {
     font-size: 100%;
+    margin: auto;
   }
 }
 

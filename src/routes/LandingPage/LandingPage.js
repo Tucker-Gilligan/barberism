@@ -10,12 +10,16 @@ export default function LandingPage() {
       <div className="get__started">
         <h4>Get Started</h4>
         <div className="get__started__links">
-          <div className="get__started__link">
-            <Link to="/locate-barber">Locate a Barber</Link>
-          </div>
-          <div className="get__started__link">
-            <Link to="/register-barber">Register a Barber</Link>
-          </div>
+          <Link to="/locate-barber">
+            <div className="get__started__link">
+              <p className="get__started__text"> Locate a Barber</p>
+            </div>
+          </Link>
+          <Link to="/register-barber">
+            <div className="get__started__link">
+              <p className="get__started__text"> Register a Barber</p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
