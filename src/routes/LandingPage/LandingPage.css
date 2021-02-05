@@ -54,9 +54,11 @@
   color: #3c403d;
 }
 
-.get__started__links a:active {
+.get__started__link:hover,
+.get__started__link:hover a {
   background-color: #3c403d;
   color: #daded4;
+  cursor: pointer;
 }
 
 /* .get__started__links {
