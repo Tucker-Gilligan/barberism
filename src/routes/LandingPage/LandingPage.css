@@ -46,14 +46,16 @@
   flex-direction: column;
 }
 
-.get__started__links a:visited {
-  color: #3c403d;
-}
-
 .get__started__link:hover {
   background-color: #3c403d;
   color: #daded4;
   cursor: pointer;
+}
+
+.start__link:active,
+.start__link:link,
+.start__link:visited {
+  color: #3c403d;
 }
 
 .get__started__link p {
